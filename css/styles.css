@@ -5,7 +5,7 @@
 html {
     width: 375px;
     margin: 0 auto;
-}    
+}
 
 body {
     font-family: 'Poppins', Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -50,31 +50,35 @@ header {
 main {
     display: flex;
     flex-flow: column wrap;
-    width: 312px;
+    width: 100%;
 }
 
 article {
     width: 100%;
     background-color: #ffffff;
     padding: 10px 20px;
-    margin: 25px 0;
     border-radius: 5px;
-    border-top:  5px solid hsl(180, 62%, 55%);
     box-shadow: 0px 0px 15px 10px hsl(0, 0%, 93%);
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    margin: 15px 0;
 }
 
-article:nth-of-type(2) {
-    border-top:  5px solid hsl(0, 78%, 62%);
+.one {
+    border-top: 5px solid hsl(180, 62%, 55%);
 }
 
-article:nth-of-type(3) {
-    border-top:  5px solid hsl(34, 97%, 64%);
+.two {
+    border-top: 5px solid hsl(0, 78%, 62%);
+    margin-bottom: 30px;
 }
 
-article:nth-of-type(4) {
-    border-top:  5px solid hsl(212, 86%, 64%);
+.three {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.four {
+    border-top: 5px solid hsl(212, 86%, 64%);
 }
 
 figure {
@@ -97,28 +101,26 @@ figure {
 
     main {
         flex-flow: row wrap;
-        justify-content: center;
-        width: 100%;
+        justify-content: space-between;
     }
 
-    article {
+    .width-one {
+        display: flex;
+        flex-flow: column wrap;
         width: 30%;
-        margin: 15px 15px;
+        justify-content: center;
     }
 
-    .one {
-                 
+    .width-two {
+        display: flex;
+        flex-flow: column wrap;
+        width: 30%;
     }
 
-    .two {
-
-    }
-
-    .three {
-        order: 1;
-    }
-
-    .four {
-        align-self: center;
+    .width-three {
+        display: flex;
+        flex-flow: column wrap;
+        width: 30%;
+        justify-content: center;
     }
 }
